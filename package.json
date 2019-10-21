@@ -1,0 +1,21 @@
+{
+  "name": "novo",
+  "version": "1.0.0",
+  "description": "My supreme Nuxt.js project",
+  "author": "Deyvidy Luã Nascimento dos Santos",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.6.0",
+    "nuxt": "^2.0.0",
+    "vuetify": "^2.1.5"
+  },
+  "devDependencies": {
+    "@mdi/font": "^4.5.95"
+  }
+}
