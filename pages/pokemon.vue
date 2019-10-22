@@ -47,8 +47,8 @@
             const url = context.query;          
             const baseUrl = `https://pokeapi.co/api/v2/pokemon?${url.offset}&limit=20`;
             const response = await getAllPokemon(baseUrl)
-            const result = await loadPokemon(response.results);   
-            
+            const result = await loadPokemon(response.results);
+
             // context.store.commit('pokemon/add', {
             //     result,
             //     next: splitUrl( response.next ),
