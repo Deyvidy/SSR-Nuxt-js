@@ -39,7 +39,8 @@
 
         <v-navigation-drawer
             v-model="drawer"
-            absolute
+            app                           
+            dark
             temporary
         >
             <v-list-item>

@@ -1,10 +1,25 @@
 <template>
     <li>
         <div class="container-pokemon">
-            <div class="container-imagem">
-                <img :src="pokemon.sprites.front_default" :alt="pokemon.name" v-on:load="setLoad(true)"/>                 
-                <img v-if="!isLoad"  class="loading-img" src="/img/loading.gif" :alt="pokemon.name"/>
-               
+            <div class="container-imagem">               
+                <v-img
+                    :src="pokemon.sprites.front_default"
+                    aspect-ratio="1"
+                    class="grey lighten-2 pokemon-img"
+                >
+                    <template v-slot:placeholder>
+                        <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                        >
+                            <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                        </v-row>
+                    </template>
+                </v-img>
+
+
+
                 <p>{{pokemon.name}}</p>
             </div>
             <hr />
@@ -53,10 +68,6 @@
         margin: 45px 15px;
     }
 
-    .container-imagem {
-        height: 5rem;
-    }
-
     .container-imagem img {
         position: absolute;
         border: 1px solid  #ffdd56;
@@ -65,6 +76,24 @@
         left: 4.1rem;
         background: #ffff;
     }
+
+    .pokemon-img {
+        border: 1px solid #ffdd56;
+        border-radius: 100%;
+        top: -3rem;
+        left: 4.1rem;
+        background: #ffff;
+        max-width: 45%;
+    }
+
+    .v-progress-circular {
+        left: 2.6rem;
+        top: 2rem;
+    }
+/* 
+    .v-image__image--cover {
+        border-radius: 100% !important;
+    } */
 
     .loading-img {
         width: 42%;
@@ -75,7 +104,7 @@
     }
 
     .container-pokemon p {
-        margin-top: 3.5rem;
+        margin-top: -2.7rem;
         font-size: 24px;
         font-weight: 700;
         text-transform: capitalize;

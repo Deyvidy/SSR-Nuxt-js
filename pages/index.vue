@@ -2,16 +2,28 @@
     <div class="container">
         <h1 class="title"> teste </h1>
         <h2 class="subtitle"> My impressive Nuxt.js project </h2>
-        <div class="post-container">
-            <Preview 
-                v-for="article in articles"
-                :key="article.id"
-                :title="article.title"
-                :image="image"
-                :excerpt="article.body"
-                :id="article.id.toString()"
-            />           
-        </div>
+        <v-lazy
+            v-model="isActive"
+            :options="{
+                threshold: .5
+            }"
+            min-height="200"
+            transition="fade-transition"
+        >
+            <v-container fluid>
+                <v-row dense>                
+                    <Preview 
+                        v-for="article in articles"
+                        :key="article.id"
+                        :title="article.title"
+                        :image="image"
+                        :excerpt="article.body"
+                        :id="article.id.toString()"
+                    />
+                </v-row>
+            </v-container>
+
+        </v-lazy>
     </div>
 </template>
 
@@ -19,11 +31,10 @@
     import axios from 'axios'
     import Preview from '~/components/Post/Preview.vue'
     export default {
-        data: function () {
-            return {
-                image: 'https://via.placeholder.com/150/24f355'
-            }
-        },
+        data: () => ({
+            image: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
+            isActive: false,
+        }),
         components: {
             Preview
         },
