@@ -1,15 +1,21 @@
 <template>
-    <div>
+    <v-app>
         <Header />
-            <nuxt />             
+        <v-content>
+            <v-container
+                fill-height
+                class="py-12"
+            >               
+                <nuxt />
+            </v-container>
+        </v-content>
         <Footer />
-    </div>
+    </v-app>
 </template>
 
 <script>
     import Header from '~/components/Home/Header.vue'
     import Footer from '~/components/Home/Footer.vue'
-
     export default {
         components: {
              Header,
@@ -25,17 +31,9 @@
     }
     
     html, body {
-        background: linear-gradient(to bottom right,#024,#402);
-        font-family: Cinzel Decorative, sans-serif;
-    }
-
-    /* .container {
-        max-width: 780px;
-        min-height: 50vh;
-        border: 1px solid #d3d3d3;
-        padding: 20px;      
-        margin: auto;
-    } */
+        /* background: linear-gradient(to bottom right,#024,#402); */
+        font-family: Cinzel Decorative, sans-serif !important;
+    } 
 
     .button--green {
         display: inline-block;

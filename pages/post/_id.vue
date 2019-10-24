@@ -45,6 +45,9 @@ export default {
             id: this.$route.params.id
         }
     },
+     created: function () {
+        this.$store.commit('alterarTitulo',this.post.title)
+    },
     async asyncData (context) {
         try {
             const {data} = await axios.get(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`)
@@ -61,16 +64,5 @@ export default {
         margin-top: 1rem;
         font-size: 12px;
         text-decoration: underline;
-    }
-    .full-height {
-        height:100vh;
-    }
-    .mx-auto {
-        margin: 0 auto;
-    }
-    .height-100 {
-       height:100%; 
-       justify-content: center;
-       align-items: center;
-    }
+    }  
 </style>

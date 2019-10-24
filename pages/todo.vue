@@ -1,10 +1,14 @@
 <template>
     <div class="container">
-        <h1>Todo</h1>
+        <v-text-field
+            label="To Do"
+                :outlined="true"
+            :rounded="true"
+            :solo="true"
+            @keyup.enter="addTodo"
+            placeholder="O que deseja fazer"
+        ></v-text-field>
         <ul>
-            <li>
-                <input class="input-to-do" placeholder="O que deseja fazer" @keyup.enter="addTodo">
-            </li>
             <li :class="{ done: todo.done } + ' item-to-do'"  v-for="(todo, index) in todos" :key="index">
                 <input type="checkbox" :checked="todo.done" @change="toggle(todo)">
                 <span :class="{ done: todo.done }">{{ todo.text }}</span>
@@ -34,20 +38,15 @@ export default {
         removeTodo(todo) {
             this.$store.commit('todos/remove', todo)
         }
-    }
+    },
+    created: function () {
+        this.$store.commit('alterarTitulo',"To do")
+    },
 }
 </script>
 
 <style scoped>
-    .container  {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 45px auto;
-        margin-bottom: 4rem;
-        height: 100vh;
-    }
+  
     .input-to-do {
         border: 1px solid #fff;
         height: 39px;
@@ -73,7 +72,7 @@ export default {
     .remove-to-do {
        background: red;
         color: #fff;
-        padding: 5px 15px;
+        padding: 2px 15px;
         border-radius: 50px;
     }
     ul{

@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <h1 class="title"> teste </h1>
         <h2 class="subtitle"> My impressive Nuxt.js project </h2>
         <v-lazy
@@ -38,26 +38,12 @@
         components: {
             Preview
         },
+        created: function () {
+            this.$store.commit('alterarTitulo',"Blog")
+        },
         async asyncData () {
             const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
             return {articles:data}    
         }
     }
 </script>
-
-<style scoped>
-    .container  {
-        display: flex;
-        flex-direction: column;
-        margin: 45px auto;
-        margin-bottom: 4rem;
-    }
-    
-   .post-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;    
-        width: 100%;
-        justify-content: space-between;
-    }
-</style>

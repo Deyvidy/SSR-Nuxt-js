@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        <h1 class="title"> Pokemon </h1>
         <div v-if="data">
             <ul>
                 <CardPokemon 
@@ -29,6 +28,9 @@
     export default {
         components: {
             CardPokemon
+        },
+        created: function () {
+            this.$store.commit('alterarTitulo',"Pokemons")
         },
         //  computed: {
         //     data () {
@@ -65,14 +67,11 @@
 </script>
 
 <style scoped>
-    .container  {
-        display: flex;
-        flex-direction: column;
-        margin: 45px auto;
-        margin-bottom: 4rem;
+    .container {
+        padding: 45px 0;
     }
     h1 {
-        color: #fff;
+        color: #000;
         font-size: 3rem;
         text-align: center;
     }

@@ -1,6 +1,5 @@
 <template>
-    <div class="container">
-        <h1>Usuarios</h1>
+    <div>
         <ul>
             <li
                 v-for="usuario in usuarios" 
@@ -22,21 +21,14 @@ export default {
         } catch (error) {
             console.log(error)
         }
+    },
+    created: function () {
+        this.$store.commit('alterarTitulo',"Autores")
     }
 }
 </script>
 
 <style scoped>
-    .container  {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* margin: 45px auto; */
-        justify-content: center;
-        margin-bottom: 4rem;
-        height: 100vh;
-    }
     h1 {
         margin: 15px 0;
     }
@@ -48,6 +40,6 @@ export default {
     }
     ul li a {
         text-decoration: none;
-        color: #ffff;
+        color: #000;
     }
 </style>

@@ -57,6 +57,9 @@
 </script>
 
 <style scoped>
+    .v-application .grey.lighten-2 {
+        background-color: #000 !important;
+    }
     .container-pokemon {
         width: 225px;
         display: flex;
@@ -66,6 +69,7 @@
         position: relative;
         height: auto;
         margin: 45px 15px;
+        background: linear-gradient(to bottom right,#024,#402);
     }
 
     .container-imagem img {

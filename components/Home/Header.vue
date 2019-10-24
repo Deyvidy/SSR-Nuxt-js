@@ -7,7 +7,7 @@
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-            <v-toolbar-title>Page teste</v-toolbar-title>
+            <v-toolbar-title>{{ $store.state.titulo }}</v-toolbar-title>
 
             <v-spacer></v-spacer>
 
@@ -83,12 +83,12 @@
             return {
                 drawer: null,
                 items: [
-                    { title: 'Home', icon: 'monitor-dashboard ', link: '/' },
-                    { title: 'About', icon: 'question-mark-circle-outline', link: '/about' },
-                    { title: 'Pokemon', icon: 'monitor-dashboard ', link: '/pokemon' },
-                    { title: 'Usuarios', icon: 'question-mark-circle-outline', link: '/users' },
-                    { title: 'To do', icon: 'question-mark-circle-outline', link: '/todo' },
-                    { title: 'Teste', icon: 'question-mark-circle-outline', link: '/teste' },
+                    { title: 'Home', icon: 'mdi-heart', link: '/' },
+                    { title: 'About', icon: 'mdi-heart', link: '/about' },
+                    { title: 'Pokemon', icon: 'mdi-heart', link: '/pokemon' },
+                    { title: 'Usuarios', icon: 'mdi-heart', link: '/users' },
+                    { title: 'To do', icon: 'mdi-heart', link: '/todo' },
+                    { title: 'Teste', icon: 'mdi-heart', link: '/teste' },
                 ],
             }
         },

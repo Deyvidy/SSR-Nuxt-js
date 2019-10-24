@@ -7,6 +7,9 @@
 <script>
 import axios from 'axios'
 export default {
+    created: function () {
+        this.$store.commit('alterarTitulo',this.usuario.name)
+    },
     async asyncData (context) {
         try {
             const {data} = await axios.get(`https://jsonplaceholder.typicode.com/users/${context.params.id}`)
@@ -20,10 +23,6 @@ export default {
 
 <style scoped>
     .container  {
-       display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        text-align: center;
     }
 </style>
