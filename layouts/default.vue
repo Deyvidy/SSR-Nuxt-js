@@ -9,7 +9,7 @@
                 <nuxt />
             </v-container>
         </v-content>
-        <Footer />
+        <!-- <Footer /> -->
     </v-app>
 </template>
 
@@ -33,6 +33,7 @@
     html, body {
         /* background: linear-gradient(to bottom right,#024,#402); */
         font-family: Cinzel Decorative, sans-serif !important;
+        /* background: #424242 !important; */
     } 
 
     .button--green {
