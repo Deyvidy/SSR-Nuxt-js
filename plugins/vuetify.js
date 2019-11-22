@@ -8,7 +8,8 @@ Vue.use(Vuetify)
 export default ctx => {
     const vuetify = new Vuetify({
         theme: {
-            dark: false,
+            disable: false,
+            dark: true,
             themes: {
                 dark: {
                     primary: colors.deepPurple.lighten3,
@@ -17,8 +18,17 @@ export default ctx => {
                     info: colors.teal.lighten1,
                     warning: colors.amber.base,
                     error: colors.deepOrange.accent4,
-                    success: colors.green.accent4
-                }
+                    success: colors.green.accent4,
+                    background: "#0a0b18"
+                },
+                options: {
+                    customProperties: true,
+                    minifyTheme: function (css) {
+                        return process.env.NODE_ENV === 'production'
+                            ? css.replace(/[\r\n|\r|\n]/g, '')
+                            : css
+                    },
+                },
             }
         },
         icons: {

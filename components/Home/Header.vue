@@ -88,6 +88,8 @@
                     { title: 'Pokemon', icon: 'mdi-heart', link: '/pokemon' },
                     { title: 'Usuarios', icon: 'mdi-heart', link: '/users' },
                     { title: 'To do', icon: 'mdi-heart', link: '/todo' },
+                    { title: 'Notas', icon: 'mdi-heart', link: '/note' },
+                    { title: 'Calendario', icon: 'mdi-heart', link: '/controle' },
                     { title: 'Teste', icon: 'mdi-heart', link: '/teste' },
                 ],
             }

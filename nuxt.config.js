@@ -30,7 +30,10 @@ export default {
     ** Global CSS
     */
     css: [
-        'fullcalendar/dist/fullcalendar.min.css'
+        'fullcalendar/dist/fullcalendar.min.css',
+        'quill/dist/quill.snow.css',
+        'quill/dist/quill.bubble.css',
+        'quill/dist/quill.core.css'
     ],
     /*
     ** Plugins to load before mounting the App
@@ -38,7 +41,8 @@ export default {
     plugins: [
         // '@plugins/vuetify',
         { src: '@plugins/vuetify' },
-        { src: '~plugins/full-calendar', ssr: false }
+        { src: '~plugins/full-calendar', ssr: false },
+        { src: '~plugins/nuxt-quill-plugin.js', ssr: false }
     ],
     /*
     ** Nuxt.js dev-modules

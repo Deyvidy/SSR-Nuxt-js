@@ -5,6 +5,7 @@
             <v-container
                 fill-height
                 class="py-12"
+                color="#0a0b18"
             >               
                 <nuxt />
             </v-container>
@@ -20,7 +21,12 @@
         components: {
              Header,
             Footer
+        },
+        computed:{
+        theme(){
+            return 'dark'
         }
+    }
     }
 </script>
 
@@ -28,13 +34,12 @@
     * {
         padding: 0px;
         margin: 0px;   
+        /* font-family: Cinzel Decorative, sans-serif !important; */
     }
     
-    html, body {
-        /* background: linear-gradient(to bottom right,#024,#402); */
-        font-family: Cinzel Decorative, sans-serif !important;
-        /* background: #424242 !important; */
-    } 
+    .v-content {
+        background-color: #0a0b18;
+    }
 
     .button--green {
         display: inline-block;

@@ -17,6 +17,7 @@
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
     "vue-full-calendar": "^2.7.0",
+    "vue-quill-editor": "^3.0.6",
     "vuetify": "^2.1.5"
   },
   "devDependencies": {
