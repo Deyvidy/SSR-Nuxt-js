@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export function getAllPokemon(url) {
+    console.log('aqui')
     return new Promise((resolve, reject) => {
         axios.get(url).then(res => res.data)
             .then(data => {

@@ -1,6 +1,6 @@
 <template>
-    <v-row class="fill-height">
-        <v-col>
+    <v-row class="fill-height" >
+        <v-col max-width="300">
             <v-sheet height="64">
                 <v-toolbar flat color="white">
                     <v-btn outlined class="mr-4" @click="setToday">
@@ -40,8 +40,8 @@
             </v-sheet>
             <v-sheet height="600">
                 <v-calendar ref="calendar" locale="pt-br" :dark="true" v-model="focus" color="gray" :events="events"
-                    :event-color="getEventColor" :event-margin-bottom="3"  :type="type"
-                    @click:event="showEvent" @click:more="viewDay" @click:date="viewDay" @change="updateRange">
+                    :event-color="getEventColor" :event-margin-bottom="3" :type="type" @click:event="showEvent"
+                    @click:more="viewDay" @click:date="viewDay" @change="updateRange">
                 </v-calendar>
                 <v-menu v-model="selectedOpen" :close-on-content-click="false" :activator="selectedElement" offset-x>
                     <v-card color="grey lighten-4" min-width="350px" flat>
@@ -312,4 +312,8 @@
         border-color: #424242;
         color: #fff;
     }
+    .row.fill-height {
+        max-width: 100vw;
+    }
+
 </style>

@@ -3,7 +3,7 @@
         <v-col>
             <v-card
                 class="mx-auto"
-                max-width="350"
+                max-width="300"
             >
                 <v-img
                     class="white--text align-end"

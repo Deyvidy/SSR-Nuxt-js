@@ -15,7 +15,8 @@
 
         <div class="paginacao">            
             <nuxt-link v-if="previous" :to="'/pokemon/?offset=' + previous">Previous</nuxt-link>
-            <nuxt-link v-if="next" :to="'/pokemon/?offset=' + next">Next</nuxt-link>           
+            <nuxt-link v-if="next" :to="'/pokemon/?offset=' + next">Next</nuxt-link>     
+            <a :href="'/pokemon/?offset=' + next">teste</a>      
         </div>        
 
     </div>
@@ -56,6 +57,11 @@
             //     next: splitUrl( response.next ),
             //     previous: splitUrl( response.previous ),                
             // } )
+
+            if (process.server) {
+                const { req, res, beforeNuxtRender } = context
+                console.log('servidor')
+            }
            
             return {
                 data: result,
