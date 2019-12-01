@@ -56,6 +56,7 @@ export default {
     modules: [
         '@nuxtjs/axios',
         '@nuxtjs/component-cache',
+        '@nuxtjs/pwa',
     ],
     /*
     ** Build configuration
