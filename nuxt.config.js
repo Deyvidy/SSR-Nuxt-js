@@ -43,6 +43,7 @@ export default {
         { src: '~plugins/full-calendar', ssr: false },
         { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
         { src: '~plugins/moment', ssr: false },
+        { src: '~/plugins/vue-touch', ssr: false },
     ],
     /*
     ** Nuxt.js dev-modules

@@ -7,32 +7,8 @@
             v-model="tab"
             hide-slider
         >
-
-            <!-- <v-tabs-slider></v-tabs-slider> -->
-
-                <v-tab
-                    v-for="i in tabs"
-                    :key="i"
-                    :href="`#tab-${i}`"
-                >
-                    {{ i }} Day
-                </v-tab>
-
-                <v-tab-item
-                    v-for="(i, index) in tabs"
-                    :key="i"
-                    :value="'tab-' + i"
-                >
-                    <v-card
-                        flat
-                        tile
-                        color="#f3f3fd"
-                    >
-                        <Teste :index="index" />
-                        
-                    </v-card>
-                </v-tab-item>
-        </v-tabs>
+    <span v-touch:tap="touchHandler">Tap Me</span>
+           
   </v-card>
   
 </template>
@@ -40,14 +16,11 @@
 <script>
 import Header from "~/components/Home/Header.vue";
 import Footer from "~/components/Home/Footer.vue";
-// import Teste from '~/components/Teste/Teste.vue';
 
 export default {
     components: {
         Header,
         Footer,
-        // Teste
-        'Teste': () => import('~/components/Teste/Teste.vue')
     },
     data () {
         return {

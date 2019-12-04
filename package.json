@@ -20,6 +20,7 @@
     "nuxt": "^2.0.0",
     "vue-full-calendar": "^2.7.0",
     "vue-quill-editor": "^3.0.6",
+    "vue2-touch-events": "^2.0.1",
     "vuetify": "^2.1.5"
   },
   "devDependencies": {
