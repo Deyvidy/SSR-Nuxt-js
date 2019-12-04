@@ -26,22 +26,22 @@
 </template>
 
 <script>
-    import axios from 'axios'
-    import Preview from '~/components/Post/Preview.vue'
-    export default {
-        data: () => ({
-            image: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-            isActive: false,
-        }),
-        components: {
-            Preview
-        },
-        created: function () {
-            this.$store.commit('alterarTitulo',"Blog")
-        },
-        async asyncData () {
-            const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-            return {articles:data}    
-        }
+import axios from 'axios'
+import Preview from '~/components/Post/Preview.vue'
+export default {
+    data: () => ({
+        image: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
+        isActive: false,
+    }),
+    components: {
+        Preview
+    },
+    created: function () {
+        this.$store.commit('alterarTitulo',"Blog")
+    },
+    async asyncData () {
+        const {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        return {articles:data}    
     }
+}
 </script>

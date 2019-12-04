@@ -4,6 +4,7 @@
         <v-content>
             <v-container
                 fill-height
+                class="py-12"
             >               
                 <nuxt />
             </v-container>

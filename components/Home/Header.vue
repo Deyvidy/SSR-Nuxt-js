@@ -3,18 +3,57 @@
 
         <v-app-bar
             :collapse="collapseOnScroll"
-            absolute
+            :fixed="true"
             color="#03cbc2"
             dark
             id="menu-dash"
             elevation="3"
-            @click.stop="drawer = !drawer"
+            scroll-target="#scrolling-techniques-6"
+           
         >
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon  @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-            <!-- <v-spacer></v-spacer> -->
+            <v-spacer></v-spacer>
         </v-app-bar>
 
+<!-- 
+        <v-app-bar
+            color="deep-purple accent-4"
+            dark
+            :fixed="true"
+        >
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+
+            <v-toolbar-title>{{ $store.state.titulo }}</v-toolbar-title>
+
+            <v-spacer></v-spacer>
+
+            <v-btn icon>
+                <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+
+            <v-menu
+                left
+                bottom
+            >
+                <template v-slot:activator="{ on }">
+                    <v-btn icon v-on="on">
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+
+                 <v-list>
+                    <v-list-item
+                        v-for="(item, index) in items"
+                        :key="index"
+                    >
+                        <nuxt-link :to="item.link"> {{ item.title }} </nuxt-link>
+                    </v-list-item>
+                </v-list>
+
+            </v-menu>
+        </v-app-bar>     -->
+       
 
         <v-navigation-drawer
             v-model="drawer"
@@ -106,11 +145,12 @@
     }
 
     #menu-dash{
-        width: 100px
+        width: 80px;
+        height: 60px !important;
     }
 
     .v-toolbar.v-toolbar--collapsed {
-        border-bottom-right-radius: 50px !important;
+        border-bottom-right-radius: 30px !important;
     }
 
     .lightbox {
@@ -120,4 +160,9 @@
     .v-btn--fab.v-size--small.v-btn--absolute.v-btn--top  {
         top:10px
     }
+
+    .v-toolbar__content>.v-btn.v-btn--icon:first-child, .v-toolbar__extension>.v-btn.v-btn--icon:first-child {
+        margin-left: -5px;
+    }
+
 </style>

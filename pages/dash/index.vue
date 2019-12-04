@@ -8,13 +8,15 @@
 
         <v-row align="center">
             <v-col
+                class="d-none d-sm-flex"
                 cols="1"
             >
                 <Horas :horas="times"/>
             </v-col>
 
             <v-col
-                cols="11"
+                
+                class="col-xs-12 col-sm-11"
             >
                 <Dias :tabs="tabs"/>
 
@@ -29,6 +31,10 @@
 <script src="./index.vue.js"></script>
 
 <style>
+    #dash-app .row {
+        margin: 0px !important;
+    }
+
     #dash-app .col{
         padding: 0px !important;
     }
@@ -39,6 +45,7 @@
     #card-dash {
         border-top-left-radius: 45px;
         border-bottom-left-radius: 45px;
+        margin: 0px !important;
     }
 
     .v-slide-group__content a {
