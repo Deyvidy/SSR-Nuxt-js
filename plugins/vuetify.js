@@ -9,7 +9,7 @@ export default ctx => {
     const vuetify = new Vuetify({
         theme: {
             disable: false,
-            dark: true,
+            dark: false,
             themes: {
                 dark: {
                     primary: colors.deepPurple.lighten3,

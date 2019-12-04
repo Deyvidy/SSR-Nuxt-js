@@ -4,6 +4,7 @@
         grow
         color="teal"
         :fixed="true"
+        class="d-md-none"
     >
         <v-btn>
           <span>Recents</span>

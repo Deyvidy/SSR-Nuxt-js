@@ -39,17 +39,21 @@ export default {
     ** Plugins to load before mounting the App
     */
     plugins: [
-        // '@plugins/vuetify',
         { src: '@plugins/vuetify' },
         { src: '~plugins/full-calendar', ssr: false },
-        { src: '~plugins/nuxt-quill-plugin.js', ssr: false }
+        { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
+        { src: '~plugins/moment', ssr: false },
     ],
     /*
     ** Nuxt.js dev-modules
     */
     buildModules: [
-
+        '@nuxtjs/moment'
     ],
+    moment: {
+        defaultLocale: 'pt-br',
+        locales: ['pt-br']
+    },
     /*
     ** Nuxt.js modules
     */
@@ -57,6 +61,7 @@ export default {
         '@nuxtjs/axios',
         '@nuxtjs/component-cache',
         '@nuxtjs/pwa',
+        '@nuxtjs/moment',
     ],
     /*
     ** Build configuration

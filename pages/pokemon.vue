@@ -15,8 +15,7 @@
 
         <div class="paginacao">            
             <nuxt-link v-if="previous" :to="'/pokemon/?offset=' + previous">Previous</nuxt-link>
-            <nuxt-link v-if="next" :to="'/pokemon/?offset=' + next">Next</nuxt-link>     
-            <a :href="'/pokemon/?offset=' + next">teste</a>      
+            <nuxt-link v-if="next" :to="'/pokemon/?offset=' + next">Next</nuxt-link>
         </div>        
 
     </div>
