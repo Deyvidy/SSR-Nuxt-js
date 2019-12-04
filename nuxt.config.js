@@ -16,7 +16,6 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Nunito:600' }
         ]
     },
     serverMiddleware: [
@@ -44,6 +43,7 @@ export default {
         { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
         { src: '~plugins/moment', ssr: false },
         { src: '~/plugins/vue-touch', ssr: false },
+        { src: '~/plugins/quasar'},
     ],
     /*
     ** Nuxt.js dev-modules
@@ -74,5 +74,4 @@ export default {
         extend(config, ctx) {
         }
     },
-
 }

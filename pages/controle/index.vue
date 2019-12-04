@@ -39,7 +39,7 @@
                 </v-toolbar>
             </v-sheet>
             <v-sheet height="600">
-                <v-calendar ref="calendar" locale="pt-br" :dark="true" v-model="focus" color="gray" :events="events"
+                <v-calendar ref="calendar" locale="pt-br"  v-model="focus" color="gray" :events="events"
                     :event-color="getEventColor" :event-margin-bottom="3" :type="type" @click:event="showEvent"
                     @click:more="viewDay" @click:date="viewDay" @change="updateRange">
                 </v-calendar>
@@ -307,11 +307,11 @@
 </script>
 
 <style scoped>
-    .theme--dark.v-sheet {
+    /* .theme--dark.v-sheet {
         background-color: #424242 !important;
         border-color: #424242;
         color: #fff;
-    }
+    } */
     .row.fill-height {
         max-width: 100vw;
     }

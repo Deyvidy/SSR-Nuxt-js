@@ -8,7 +8,7 @@
             dark
             id="menu-dash"
             elevation="3"
-            scroll-target="#scrolling-techniques-6"
+            
            
         >
             <v-app-bar-nav-icon  @click.stop="drawer = !drawer"></v-app-bar-nav-icon>

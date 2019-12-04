@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="'post/'+ id">
+    <nuxt-link :to="'post/'+ id" class="mx-auto">
         <v-col>
             <v-card
                 class="mx-auto"

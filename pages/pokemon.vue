@@ -89,6 +89,7 @@
         justify-content: center;
         flex-direction: row;
         flex-flow: wrap;
+        padding-left: 0 !important;
     }
     .paginacao {
         display: flex;
