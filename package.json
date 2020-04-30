@@ -15,7 +15,7 @@
     "@nuxtjs/component-cache": "^1.1.5",
     "@nuxtjs/moment": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
     "quasar": "^1.5.4",
