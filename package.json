@@ -16,7 +16,7 @@
     "@nuxtjs/moment": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nuxt": "^2.0.0",
     "quasar": "^1.5.4",
     "vue-full-calendar": "^2.7.0",
